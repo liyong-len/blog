@@ -1,0 +1,5 @@
+.idea/
+blog.iml
+
+# Project exclude paths
+/target/

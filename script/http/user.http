@@ -1,0 +1,38 @@
+### 根据Id获取用户信息
+GET {{root}}/user/get?id=1
+
+### 根据Id获取用户信息
+GET {{root}}/user/list
+
+### 根据Id删除用户信息
+DELETE {{root}}/user/delete/2
+
+### 根据Id修改用户信息
+PUT {{root}}/user/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "username": "liyong",
+  "avatar": "https://image-1300566513.cos.ap-guangzhou.myqcloud.com/upload/images/5a9f48118166308daba8b6da7e466aab.jpg",
+  "email": null,
+  "password": "123123",
+  "status": 0,
+  "created": "2020-09-20T10:44:01",
+  "lastLogin": null
+}
+
+### 新增用户信息
+POST {{root}}/user/add
+Content-Type: application/json
+
+{
+  "username": "wuyue",
+  "avatar": "https://image-1300566513.cos.ap-guangzhou.myqcloud.com/upload/images/5a9f48118166308daba8b6da7e466aab.jpg",
+  "email": null,
+  "password": "123123",
+  "status": 0,
+  "created": "2020-09-20T10:44:01",
+  "lastLogin": null
+}
+
