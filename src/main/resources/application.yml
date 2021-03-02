@@ -1,12 +1,14 @@
-# DataSource Config
+server:
+  port: 3001
 spring:
   application:
     name: blog
+    # DataSource Config
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
-    username: root
-    password: pass1234
+    url: jdbc:mysql://119.45.61.62:3306/test?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: blog
+    password: blog@123
   #设置时区
   jackson:
     time-zone: GMT+8
@@ -18,3 +20,14 @@ mybatis-plus:
   configuration:
     auto-mapping-behavior: partial #只对非嵌套的 resultMap 进行自动映射
     map-underscore-to-camel-case: true #开启自动驼峰命名规则映射
+shiro-redis:
+  enabled: true
+  redis-manager:
+    host: 127.0.0.1:6379
+blog:
+  jwt:
+    # 加密秘钥
+    secret: f4e2e52034348f86b67cde581c0f9eb5
+    # token有效时长，7天，单位秒
+    expire: 604800
+    header: token

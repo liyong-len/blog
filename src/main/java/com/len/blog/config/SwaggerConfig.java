@@ -16,7 +16,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @Configuration
 @EnableSwagger2
-public class Swagger {
+public class SwaggerConfig {
+
 
     /**
      * 通过 createRestApi函数来构建一个DocketBean

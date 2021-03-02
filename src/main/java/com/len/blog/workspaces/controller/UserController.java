@@ -1,6 +1,7 @@
 package com.len.blog.workspaces.controller;
 
 
+import cn.hutool.core.util.IdUtil;
 import com.google.common.collect.Lists;
 import com.len.blog.annotation.log.RequsetLog;
 import com.len.blog.core.Result;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.sql.Wrapper;
+import java.util.Date;
 
 /**
  * <p>
@@ -23,7 +25,7 @@ import java.sql.Wrapper;
  */
 @RestController
 @RequestMapping("/user")
-@Api(value = "用户控制器")
+@Api(value = "用户控制器",tags = "用户管理")
 public class UserController {
 
     @Resource
